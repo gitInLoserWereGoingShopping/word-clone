@@ -16,7 +16,7 @@ function Game() {
   //pass setState handler down for onSubmit handling of new guess
   return (
     <>
-      <GuessResults guesses={guesses}/>
+      <GuessResults guesses={guesses} answer={answer}/>
       <GuessInput guesses={guesses} setGuesses={setGuesses}/>
     </>
   );
