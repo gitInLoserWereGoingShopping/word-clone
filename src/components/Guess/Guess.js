@@ -16,6 +16,6 @@ function Guess({ guessIndex, guesses, answer }) {
         ))}
     </p>
   );
-}
+};
 
 export default Guess;
