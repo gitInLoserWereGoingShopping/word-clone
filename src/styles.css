@@ -196,6 +196,20 @@ h1 {
   border: 0;
 }
 
+/* VISUAL KEYBOARD */
+.keyboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.keyboard.row {
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  gap: 0.25em;
+  margin-top: 0.25em;
+}
+
 /*
   Modal styles
 
