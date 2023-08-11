@@ -14,7 +14,7 @@ function Guess({ guessIndex, guesses, answer, letterStatuses }) {
       letterStatuses[letter] = status;
     } else if (status === 'misplaced' && prevStatus !== 'correct') {
       letterStatuses[letter] = 'misplaced';
-    } else {
+    } else if (prevStatus === 'incorrect') {
       letterStatuses[letter] = 'guessed';
     }
   };
