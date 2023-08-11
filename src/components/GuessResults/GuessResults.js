@@ -3,7 +3,7 @@ import { NUM_OF_GUESSES_ALLOWED } from '../../constants';
 import { range } from '../../utils';
 import Guess from '../Guess';
 
-function GuessResults({ guesses, answer }) {
+function GuessResults({ guesses, answer, letterStatuses }) {
   const guessId = React.useId();
   return (
     <div className='guess-results'>
@@ -13,6 +13,7 @@ function GuessResults({ guesses, answer }) {
           guesses={guesses}
           guessIndex={guessIndex}
           answer={answer}
+          letterStatuses={letterStatuses}
         />
       ))}
     </div>
