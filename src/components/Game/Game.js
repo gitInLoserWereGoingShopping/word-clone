@@ -17,6 +17,14 @@ const newAnswer = () => {
 // To make debugging easier, we'll log the solution in the console.
 console.info({ answer });
 
+//initialize letter statuses for visual keyboard
+const letterStatuses = initialLetterStatuses;
+const refreshLetterStatuses = () => {
+  Object.keys(letterStatuses).forEach(letter => {
+    letterStatuses[letter] = 'incorrect';
+  });
+};
+
 function Game() {
   //list of guesses here
   const [guesses, setGuesses] = React.useState([]);
@@ -26,11 +34,11 @@ function Game() {
   const isGuessInputEnabled = !(isAnswered || maxGuessesReached);
   console.log({numOfGuessesRemaining, maxGuessesReached});
   const newGame = () => {
-    setGuesses([]);
+    refreshLetterStatuses();
     newAnswer();
     console.info({ answer });
+    setGuesses([]);
   };
-  const letterStatuses = initialLetterStatuses;
   return (
     <>
       <GuessResults guesses={guesses} answer={answer} letterStatuses={letterStatuses}/>
