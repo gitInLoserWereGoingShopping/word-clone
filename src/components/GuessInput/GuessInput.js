@@ -19,7 +19,9 @@ function GuessInput({ guesses, setGuesses }) {
     const handleChange = (e) => {
         const nextGuess = e.target.value.toUpperCase();
         const lastCharEntered = nextGuess[nextGuess.length - 1];
-        if (lastCharEntered !== ' ') {
+        if (nextGuess.length === 0) {
+            setGuess('');
+        } else if (lastCharEntered.match(/[A-Z]/)) {
             setGuess(nextGuess);
         }
     };
@@ -29,7 +31,9 @@ function GuessInput({ guesses, setGuesses }) {
             <input
                 id='guess-input'
                 type='text'
+                title='Please provide a 5 letter guess 💖'
                 required
+                pattern='[A-Za-z]{5}'
                 minLength={5}
                 maxLength={5}
                 value={guess}
