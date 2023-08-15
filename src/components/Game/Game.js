@@ -44,9 +44,9 @@ function Game() {
       <GuessResults guesses={guesses} answer={answer} letterStatuses={letterStatuses}/>
       {(isAnswered || maxGuessesReached) ? <button className='loss new-game' onClick={newGame}>New Game</button> : null}
       {isGuessInputEnabled ? <GuessInput guesses={guesses} setGuesses={setGuesses}/> : null}
-      <VisualKeyboard letterStatuses={letterStatuses}/>
       {isAnswered ? <HappyBanner numOfGuesses={guesses.length}/> : null}
-      {maxGuessesReached ? <SadBanner answer={answer}/> : null}
+      {(maxGuessesReached && !isAnswered) ? <SadBanner answer={answer}/> : null}
+      <VisualKeyboard letterStatuses={letterStatuses}/>
     </>
   );
 }
