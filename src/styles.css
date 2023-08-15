@@ -4,7 +4,7 @@
 html {
   overflow-y: scroll;
 
-  --game-spacing: 32px;
+  --game-spacing: 10px;
   --header-height: 4rem;
 
   --color-success: hsl(150deg 70% 30%);
@@ -105,6 +105,10 @@ h1 {
   border: 2px solid var(--color-gray-700);
   border-radius: var(--radius);
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 21%;
+  min-width: 35px;
 }
 
 /*
@@ -227,8 +231,7 @@ h1 {
 .keyboard.row {
   flex-direction: row;
   align-self: center;
-  align-items: center;
-  gap: 0.25em;
+  gap: 0.07em;
   margin-top: 0.25em;
 }
 
