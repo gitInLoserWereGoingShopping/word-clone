@@ -170,6 +170,25 @@ h1 {
   outline-offset: 4px;
 }
 
+.new-guess-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.guess-input-tiles {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.guess-input-send {
+  text-align: center;
+  background-color: var(--color-success);
+  color: white;
+}
+.guess-input-cell {
+  border-color: var(--color-gray-300);
+}
+
 .banner {
   display: flex;
   flex-direction: column;
